@@ -1,1 +1,1 @@
-# asp-net-mvc-crud-reusing-partial-view
+# ASP.NET MVC Application crud reusing partial views
