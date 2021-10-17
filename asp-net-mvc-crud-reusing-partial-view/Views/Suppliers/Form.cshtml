@@ -1,0 +1,30 @@
+﻿@model asp_net_mvc_crud_reusing_partial_view.Models.Supplier
+<div class="mb-3">
+    @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "form-label" })
+    @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+</div>
+
+<div class="mb-3">
+    @Html.LabelFor(model => model.City, htmlAttributes: new { @class = "form-label" })
+    @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+</div>
+
+<div class="mb-3">
+    @Html.LabelFor(model => model.Country, htmlAttributes: new { @class = "form-label" })
+    @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+</div>
+
+<div class="mb-3">
+    @Html.LabelFor(model => model.Phone, htmlAttributes: new { @class = "form-label" })
+    @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+</div>
+
+<div class="mb-3">
+    @Html.LabelFor(model => model.Fax, htmlAttributes: new { @class = "form-label" })
+    @Html.EditorFor(model => model.Fax, new { htmlAttributes = new { @class = "form-control" } })
+    @Html.ValidationMessageFor(model => model.Fax, "", new { @class = "text-danger" })
+</div>

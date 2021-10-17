@@ -1,0 +1,24 @@
+﻿@model asp_net_mvc_crud_reusing_partial_view.Models.OrderLine
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">
+            @ViewBag.Title
+            <a href="@Url.Action("Index")" class="btn btn-sm btn-outline-dark float-end">Back to List</a>
+        </h5>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.Partial("Form", Model)
+            <div class="mb-3">
+                <input type="submit" value="Save" class="btn btn-sm btn-primary" />
+            </div>
+        }
+    </div>
+</div>

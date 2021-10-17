@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "asp-net-mvc-crud-reusing-partial-view", "asp-net-mvc-crud-reusing-partial-view\asp-net-mvc-crud-reusing-partial-view.csproj", "{9A7824E9-C133-4BB8-A753-2653FE283A83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A7824E9-C133-4BB8-A753-2653FE283A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A7824E9-C133-4BB8-A753-2653FE283A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A7824E9-C133-4BB8-A753-2653FE283A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A7824E9-C133-4BB8-A753-2653FE283A83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {343D87F9-6BB8-42C2-87C2-FAD3635CE366}
+	EndGlobalSection
+EndGlobal

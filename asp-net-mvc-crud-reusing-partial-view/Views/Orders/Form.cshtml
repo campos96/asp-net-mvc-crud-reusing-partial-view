@@ -1,0 +1,75 @@
+﻿@model asp_net_mvc_crud_reusing_partial_view.Models.Order
+
+<div class="mb-3">
+    @Html.LabelFor(model => model.CustomerID, htmlAttributes: new { @class = "label-label" })
+    @Html.DropDownList("CustomerID", null, htmlAttributes: new { @class = "form-control select2" })
+    @Html.ValidationMessageFor(model => model.CustomerID, "", new { @class = "text-danger" })
+</div>
+
+<div class="mb-3">
+    @Html.LabelFor(model => model.Date, htmlAttributes: new { @class = "label-label" })
+    @Html.TextBoxFor(model => model.Date, "{0:MM/dd/yyyy}", new { @class = "form-control datepicker" })
+    @Html.ValidationMessageFor(model => model.Date, "", new { @class = "text-danger" })
+</div>
+
+<div class="mb-3">
+    @Html.LabelFor(model => model.Amount, htmlAttributes: new { @class = "form-label" })
+    @Html.EditorFor(model => model.Amount, new { htmlAttributes = new { @class = "form-control", disabled = "" } })
+    @Html.ValidationMessageFor(model => model.Amount, "", new { @class = "text-danger" })
+</div>
+
+<div class="table-responsive">
+    <table class="table">
+        <thead class="table-light">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderLines.FirstOrDefault().OrderID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderLines.FirstOrDefault().Product.SupplierID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderLines.FirstOrDefault().ProductID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderLines.FirstOrDefault().Product.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderLines.FirstOrDefault().Quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OrderLines.FirstOrDefault().SubTotal)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null)
+            {
+                foreach (var item in Model.OrderLines)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.OrderID)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Supplier.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Product.Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(model => item.Product.Price)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.SubTotal)
+                        </td>
+                    </tr>
+                }
+            }
+
+        </tbody>
+    </table>
+</div>

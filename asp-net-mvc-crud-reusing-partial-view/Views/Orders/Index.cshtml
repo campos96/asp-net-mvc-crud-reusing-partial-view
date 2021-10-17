@@ -1,0 +1,54 @@
+﻿@model IEnumerable<asp_net_mvc_crud_reusing_partial_view.Models.Order>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">
+            @ViewBag.Title
+            <a href="@Url.Action("Create")" class="btn btn-sm btn-outline-dark float-end">Create</a>
+        </h5>
+        <div class="table-responsive">
+            <table class="table">
+                <thead class="table-light">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Customer.FirstName)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Date)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Amount)
+                        </th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Customer.FirstName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Date)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Amount)
+                            </td>
+                            <td>
+                                <a href="@Url.Action("Delete", new { ID = item.ID })" class="btn btn-sm btn-outline-danger float-end">Delete</a>
+                                <a href="@Url.Action("Details", new { ID = item.ID })" class="btn btn-sm btn-outline-dark float-end me-1">Details</a>
+                                <a href="@Url.Action("Edit", new { ID = item.ID })" class="btn btn-sm btn-outline-warning float-end me-1">Edit</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

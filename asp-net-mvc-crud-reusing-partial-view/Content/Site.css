@@ -1,0 +1,28 @@
+﻿.dataTables_filter {
+    float: right !important;
+}
+
+.dataTables_filter label {
+    display: inline-flex !important;
+}
+
+.dataTables_filter label input {
+    margin-left: 5px;
+}
+
+.dataTables_length label {
+    display: inline-flex !important;
+}
+
+.dataTables_length label select {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.pagination {
+    float: right !important;
+}
+
+.card-title {
+    margin-bottom: 20px;
+}
