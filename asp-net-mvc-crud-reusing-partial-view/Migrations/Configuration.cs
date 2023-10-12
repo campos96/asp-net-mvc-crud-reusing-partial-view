@@ -53,6 +53,15 @@
 
             customers.ForEach(s => context.Customers.AddOrUpdate(p => p.FirstName, s));
             context.SaveChanges();
+
+            var order = new Order {
+                CustomerID = customers.First().ID,
+                Date = DateTime.Now,
+                OrderLines = products.Select(p => new OrderLine { ProductID = p.ID, Quantity = 1 }).ToList()
+            };
+
+            context.Orders.AddOrUpdate(o => o.ID, order);
+            context.SaveChanges();
         }
     }
 }
