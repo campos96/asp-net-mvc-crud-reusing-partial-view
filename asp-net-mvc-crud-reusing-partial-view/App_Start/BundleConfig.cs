@@ -20,8 +20,8 @@ namespace asp_net_mvc_crud_reusing_partial_view
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new Bundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/popper.js",
+                      "~/Scripts/bootstrap.bundle.js",
+                      //"~/Scripts/popper.js",
                       "~/Scripts/bootstrap-datepicker.js",
                       "~/Scripts/DataTables/jquery.dataTables.js",
                       "~/Scripts/DataTables/dataTables.bootstrap4.min.js",
